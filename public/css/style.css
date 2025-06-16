@@ -77,7 +77,7 @@ main {
 }
 
 .skills div span {
-    display: inline-block;;
+    display: inline-block;
     color: #00FF7F;
     background-color: #00ff8021;
     padding: 0.5rem 1rem;
@@ -398,7 +398,7 @@ footer {
 
 @media (max-width: 768px) {
     .navbar-brand {
-        margin-left: 0.8rem;
+        margin-left: 0.5rem;
     }
 
     .custom-collapse {
@@ -416,7 +416,7 @@ footer {
     }
 
     .name div {
-        font-size: 3.8rem;
+        font-size: 3rem;
     }
 
     .description {
@@ -435,8 +435,12 @@ footer {
         margin-bottom: 30px;
     }
 
-    .skills div{
-        margin-left: 20px;
+    .skillstart {
+        margin-left: 5px;
+    }
+
+    .skills div span {
+        margin-right: 1rem;
     }
 
     .aboutme {
@@ -486,6 +490,11 @@ footer {
         display: flex;
         flex-direction: column;
         margin-left: 20px;
+    }
+
+
+    .break {
+        display: none;
     }
 
 }
