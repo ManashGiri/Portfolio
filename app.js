@@ -31,6 +31,6 @@ app.get("/achievements", (req, res) => {
     res.render("achievements.ejs", { bodyClass: '' });
 });
 
-// app.listen(8080, () => {
-//     console.log("Server is listening to port 8080");
-// });
+app.listen(8080, () => {
+    console.log("Server is listening to port 8080");
+});
