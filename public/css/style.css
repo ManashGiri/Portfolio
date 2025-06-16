@@ -1,0 +1,571 @@
+body {
+    background: linear-gradient(to right, #01241c, #02240f);
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    /* font-family: "Plus Jakarta Sans", sans-serif; */
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    color: white;
+}
+
+.text {
+    color: rgb(209, 209, 208);
+    font-size: 17px;
+}
+
+/* body.bluebg {
+    background: linear-gradient(to right, #0f1113, #192a3a, #1e2a35);
+    color: white;
+} */
+
+main {
+    flex: 1;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* HomePage Styling */
+
+.name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name div {
+    font-weight: 600;
+    font-size: 4.5rem;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #00FF7F;
+    width: 0;
+    animation: typing 3.5s steps(40) forwards, blink 0.75s step-end 0s infinite;
+}
+
+.glowing-text {
+    color: #00FF7F;
+    animation: glow-animation 1s ease-in-out infinite alternate;
+}
+
+.description {
+    margin-top: 30px;
+    text-align: center;
+    color: rgb(209, 209, 208);
+    font-size: large;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease-out 3.5s forwards;
+}
+
+.skills {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease-out 3.5s forwards; */
+}
+
+.skills div span {
+    display: inline-block;;
+    color: #00FF7F;
+    background-color: #00ff8021;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 999px;
+    margin-right: 2rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skills div span:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 255, 127, 0.3);
+    background-color: #00ff8042;
+}
+
+.contact {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease-out 3.5s forwards;
+}
+
+.contact a {
+    margin-top: 40px;
+    text-decoration: none;
+    font-size: large;
+    font-weight: 500;
+    color: #002211;
+    background-color: #00FF7F;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 999px;
+}
+
+.contact a:hover {
+    box-shadow: 0 0 10px #00FF7F;
+    color: rgb(109, 70, 253);
+}
+
+/* About Page Styling */
+.myimage {
+    /* border: 3px solid rgb(0, 162, 255); */
+    border: 3px solid #00FF7F;
+    box-shadow: 0 0 10px #00FF7F;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 14rem;
+    width: 14rem;
+    border-radius: 50%;
+    animation: waveFloat 4s ease-in-out infinite;
+}
+
+.hi-emoji {
+    display: inline-block;
+    animation: waveHi 1.5s ease-in-out infinite;
+    transform-origin: 70% 70%;
+}
+
+.skillset {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 columns */
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 3rem;
+}
+
+.skillset .skill {
+    /* height: 8rem;
+    width: 10rem; */
+    /* flex: 0 0 15%; */
+    background-color: rgba(255, 255, 255, 0.11);
+    padding: 1rem 3rem;
+    margin-right: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 10%;
+    box-shadow: 0px 0px 2px rgb(212, 212, 212);
+    color: #00FF7F;
+    font-size: 2.5rem;
+    transition: transform 0.2s ease;
+}
+
+.skillset .skill:hover {
+    background-color: rgba(255, 255, 255, 0.171);
+    transform: translateY(-6px);
+}
+
+.skill h5 {
+    margin-top: 0.5rem;
+    color: white;
+}
+
+/* Projects Page Styling */
+
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 23rem;
+    height: 33rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    border-radius: 20px;
+    box-shadow: 0px 0px 2px rgb(212, 212, 212);
+    background-color: rgba(255, 255, 255, 0.11);
+    padding: 1.5rem;
+    padding-bottom: 1.5rem;
+    transition: transform 0.2s ease;
+}
+
+.project:hover {
+    box-shadow: 0px 0px 12px rgb(22, 22, 22);
+    transform: translateY(-8px);
+}
+
+.project h3 {
+    font-weight: 650;
+}
+
+.projectimage {
+    border-radius: 10px;
+    height: 12rem;
+    width: 20rem;
+    object-fit: cover;
+}
+
+.projectlink {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to right, #00ff7f, #00cc66, #006633);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 999px;
+    transition: transform 0.2s ease;
+}
+
+.projectlink:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #00FF7F;
+    color: rgb(109, 70, 253);
+}
+
+/* Achievement Page Styling */
+.achievements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.achievecard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 17rem;
+    height: 25rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    border-radius: 20px;
+    box-shadow: 0px 0px 2px rgb(212, 212, 212);
+    background-color: rgba(255, 255, 255, 0.11);
+    padding: 1.5rem 3rem;
+    transition: transform 0.2s ease;
+}
+
+.achievecard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #00FF7F;
+}
+
+.achieveimg {
+    font-size: 3rem;
+}
+
+.achievetext {
+    color: #00FF7F;
+}
+
+.achievelink {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to right, #00ff7f, #00cc66, #006633);
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.achievelink:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px #00FF7F;
+    color: black;
+}
+
+/* Navbar Styling */
+
+.navbar {
+    background: linear-gradient(#000);
+    height: 5.5rem;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    margin-right: 1rem;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link:hover {
+    color: rgb(109, 70, 253);
+}
+
+.navbar-brand {
+    margin-left: 1.9rem;
+}
+
+.navbar-brand:hover {
+    filter: drop-shadow(0 0 10px #00FF7F);
+}
+
+.material-symbols-outlined {
+    margin-right: 0.5rem;
+}
+
+.navbar-toggler {
+    filter: brightness(0) invert(1);
+    border: none;
+}
+
+.navbar-toggler:active {
+    color: white;
+}
+
+/* Footer Styling */
+
+footer {
+    height: 25rem;
+    background-color: #011b17;
+    width: 100%;
+}
+
+.foot {
+    display: flex;
+    justify-content: space-around;
+}
+
+.foot h5 {
+    font-weight: 700 !important;
+    margin-top: 4rem;
+    color: #00FF7F;
+}
+
+.foot i {
+    font-size: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.11);
+    padding: 0.8rem;
+    border-radius: 50%;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    color: white;
+    transition: transform 0.2s ease, 0.2s ease;
+}
+
+.foot i:hover {
+    color: #00FF7F;
+    transform: translateY(-4px);
+}
+
+.foot p {
+    font-size: 17px;
+    color: white;
+}
+
+.foot a {
+    text-decoration: none;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+}
+
+.links a {
+    font-size: 17px;
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.2s ease, 0.2s ease;
+}
+
+.links a:hover {
+    color: #00FF7F;
+    transform: translateX(5px);
+}
+
+.copyright {
+    color: white;
+    text-align: center;
+    font-size: large;
+}
+
+/* Responsive Styling */
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        margin-left: 0.8rem;
+    }
+
+    .custom-collapse {
+        position: absolute;
+        top: 5.5rem;
+        left: 0;
+        width: 100%;
+        background-color: #252525;
+        padding: 0.5rem 0.8rem;
+    }
+
+    .myimage {
+        height: 12rem;
+        width: 12rem;
+    }
+
+    .name div {
+        font-size: 3.8rem;
+    }
+
+    .description {
+        font-size: 1rem;
+        margin: 20px;
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skills1 {
+        margin-bottom: 30px;
+    }
+
+    .skills div{
+        margin-left: 20px;
+    }
+
+    .aboutme {
+        font-size: 1rem;
+        margin: 10px;
+    }
+
+    .skillset {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skill {
+        padding: 1rem 2rem !important;
+    }
+
+    .mysql {
+        display: none;
+    }
+
+    .projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projects .project {
+        margin-right: 25px;
+    }
+
+    .achievements {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .achievecard {
+        margin-right: 25px;
+    }
+
+    footer {
+        height: 50rem;
+    }
+
+    .foot {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+    }
+
+}
+
+/* Animations */
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 11.2ch
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes glow-animation {
+    from {
+        text-shadow: 0 0 5px #00FF7F;
+    }
+
+    to {
+        text-shadow: 0 0 20px #00FF7F;
+    }
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes waveHi {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    15% {
+        transform: rotate(20deg);
+    }
+
+    30% {
+        transform: rotate(-15deg);
+    }
+
+    45% {
+        transform: rotate(20deg);
+    }
+
+    60% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+@keyframes waveFloat {
+    0% {
+        transform: translateY(7.5px);
+    }
+
+    50% {
+        transform: translateY(-7.5px);
+    }
+
+    100% {
+        transform: translateY(7.5px);
+    }
+}

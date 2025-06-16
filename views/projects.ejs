@@ -1,0 +1,50 @@
+<% layout("/layouts/boilerplate.ejs") -%>
+    <div class="center">
+        <h1 class="mt-4 mb-3"> My Experiments </h1>
+        <p class="text"> Exploring the intersection of design &amp; technology </p>
+        <br>
+        <div class="projects mb-4">
+            <div class="project">
+                <div>
+                    <img src="<%= process.env.NESTIN %>" class="projectimage">
+                </div>
+                <br>
+                <h3> Nestin </h3>
+                <p class="text">
+                    Built a full-stack AirBnb clone using the
+                    MERN Stack, featuring dynamic user
+                    authentication, property listings, and
+                    booking functionality, delivering a
+                    seamless user experience from
+                    frontend and backend perspectives.
+                </p>
+                <a href="https://nestin-wnne.onrender.com/listings" target="_blank" class="projectlink"> Visit Project
+                </a>
+            </div>
+            <div class="project">
+                <div>
+                    <img src="<%= process.env.SIMONSAYS %>" class="projectimage">
+                </div>
+                <br>
+                <h3> EchoTap </h3>
+                <p class="text">
+                    A classic Simon Says-style memory game built with plain JavaScript. Watch the lights, hear the
+                    tones, and tap back the pattern as it gets longer and faster. How far can your memory take you?
+                </p>
+                <a href="#" class="projectlink"> In progress... </a>
+            </div>
+            <div class="project">
+                <div>
+                    <img src="<%= process.env.POKERANDOMLIGHT %>" class="projectimage">
+                </div>
+                <br>
+                <h3> Pokérandom </h3>
+                <p class="text">
+                    A Pokémon generator that lets you choose various options and get random Pokémons. Very fun for
+                    building a challenge team, doing a Nuzlocke, or just exploring the Pokédex!
+                </p>
+                <a href="#" class="projectlink"> In progress... </a>
+                </a>
+            </div>
+        </div>
+    </div>
